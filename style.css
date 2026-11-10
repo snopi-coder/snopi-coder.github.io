@@ -1,0 +1,49 @@
+:root {
+  --paper: #F4EDE0; --card: #FBF8F1; --ink: #2B2522; --ink-2: #6B5F56;
+  --line: #E3D9C7; --primary: #2F7A58; --accent: #C99A2E;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1C1916; --card: #2A2521; --ink: #EEE5D7; --ink-2: #B0A496;
+    --line: #352E29; --primary: #63B68E; --accent: #E0B65A;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.7 "Inter", system-ui, sans-serif;
+}
+:lang(ar), [lang="ar"] { font-family: "Readex Pro", "Inter", system-ui, sans-serif; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 48px 16px 72px; }
+header.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+.mark {
+  width: 40px; height: 40px; border-radius: 12px; background: var(--card);
+  border: 1px solid var(--line); display: grid; place-items: center; color: var(--accent);
+}
+.brand b { font-family: "Lora", Georgia, serif; font-size: 20px; letter-spacing: .2px; }
+h1, h2, h3 { font-family: "Lora", Georgia, serif; font-weight: 600; line-height: 1.25; }
+[lang="ar"] h1, [lang="ar"] h2, [lang="ar"] h3 { font-family: "Readex Pro", system-ui, sans-serif; font-weight: 500; }
+h1 { font-size: 34px; margin: 0 0 8px; }
+h2 { font-size: 21px; margin: 32px 0 8px; }
+p, li { color: var(--ink); }
+.meta { color: var(--ink-2); font-size: 15px; margin: 0 0 24px; }
+.sheet {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+  padding: 32px 28px; margin: 24px 0;
+}
+.sheet > :first-child { margin-top: 0; }
+a { color: var(--primary); text-underline-offset: 3px; }
+nav.lang { display: flex; gap: 8px; flex-wrap: wrap; }
+nav.lang a {
+  padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line);
+  text-decoration: none; color: var(--ink); background: var(--card); font-size: 15px;
+}
+ul { padding-inline-start: 22px; }
+.app {
+  display: flex; gap: 16px; align-items: center; text-decoration: none; color: inherit;
+}
+.app .mark { width: 56px; height: 56px; border-radius: 16px; font-size: 26px; }
+.app small { display: block; color: var(--ink-2); font-size: 15px; }
+footer { color: var(--ink-2); font-size: 14px; margin-top: 40px; }
+@media (max-width: 480px) { h1 { font-size: 28px; } .sheet { padding: 24px 18px; } }
